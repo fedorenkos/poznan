@@ -1,0 +1,762 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+h1
+
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.header
+	width: 100%
+	display: flex
+	justify-content: space-around
+	align-items: center
+.logo
+	width: 53%
+	display: flex
+	justify-content: flex-end
+	align-items: center
+
+.socails
+	width: 30%
+	display: flex
+	justify-content: flex-end
+	align-items: flex-end
+
+.logo_h1
+	margin: 0	
+	font-family: $default-font
+	color: $accent
+	font-size: 2.250em
+	text-transform: uppercase 
+	cursor: pointer
+
+.span_h1
+	color: $accent1
+
+.soc_list
+	display: flex
+	justify-content: space-around
+	align-items: flex-start
+	padding: 0
+	li
+		list-style-type: none
+		padding: 10px
+		a
+			color: $soc-color
+
+//sliding menu
+.menu
+  cursor: pointer
+  padding-left: 1.25em
+  position: relative
+  width: 32px
+  height: 23px
+  display: none
+
+.menu-global 
+  backface-visibility: hidden
+  position: absolute
+  left: 0
+  border-top: 5px solid $black
+  width: 100%
+  transition: 0.55s
+
+.menu-top 
+  top: 0
+
+.menu-middle 
+  top: 10px
+
+.menu-bottom 
+  top: 20px
+
+.menu-top-click 
+  backface-visibility: hidden
+  top: 9px
+  transform: rotate(50deg)
+  transition: 0.55s 0.5s
+
+.menu-middle-click 
+  opacity: 0
+
+.menu-bottom-click 
+  backface-visibility: hidden
+  top: 9px
+  transform: rotate(-410deg)
+  transition: 0.55s 0.5s
+// end sliding burger-menu
+//end sliding menu
+
+.navigation
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+
+.nav
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0
+	li	
+		padding: 10px
+		list-style-type: none	
+		a
+			width: 62px
+			padding: 5px 15px
+			font-family: $second-font
+			font-size: 0.625em
+			font-weight: 400
+			line-height: 1.125em
+			color: $menu-color
+			text-decoration: none
+			&:active, &:focus
+				width: 62px
+				padding: 5px 18px
+				color: $white
+				text-decoration: none
+				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25)
+				border: 1px solid #045279
+				background-color: #076e9f
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+			
+
+.main_bg
+	width: 100%
+	padding: 156px
+	height: auto
+	background: url('../img/main-bg.jpg')
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+
+
+.main
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: relative
+
+.mainH2
+	width: 284px
+	height: 79px
+	background: rgba(255, 255, 255, 0.8)
+	font-family: $default-font
+	color: $accent
+	font-size: 3.750em
+	font-weight: 400
+	line-height: 1.125em
+	text-transform: uppercase
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 0 0 20px 0
+
+.span_h2
+	color: $accent1
+
+.div_main_p
+	width: 70%
+	padding: 5px 10px
+	background: rgba(255, 255, 255, 0.8)
+	margin: 0 0 76px 0
+
+.main_p
+	color: $accent
+	font-family: $default-font
+	font-size: 1.775em
+	font-weight: 400
+	line-height: 1.125em
+	text-transform: uppercase
+	margin: 0
+	text-align: center
+	
+
+.testamonials
+	width: 100%
+	display: flex
+	justify-content: space-around
+	align-items: center
+	background: rgba(0, 0, 0, 0.5)
+	padding: 25px 45px 25px 65px
+	position: relative
+	z-index: 1
+	top: -118px
+	flex-wrap: wrap
+
+.items
+	width: 175px
+	background: $white	
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: flex-end
+	padding: 4px 20px 3px 0
+	position: relative
+
+.image
+	position: absolute
+	left: -35px
+	z-index: 1
+
+.block
+	position: relative
+	margin-left: 90px
+
+.cite
+	margin: 0
+	font-family: $second-font
+	font-style: italic 
+	font-size: 0.563em
+	font-weight: 400
+	color: $text-color
+	text-align: left
+
+.cite_p
+	margin: 5px 0 0 0 
+	font-family: $second-font
+	font-size: 0.563em
+	font-weight: 400
+	color: $little-text
+
+.corr1
+	padding-right: 2px
+
+.corr
+	padding-right: 22px	
+
+.corr2
+	padding-right: 25px	
+
+//aside
+
+.sidebar
+	width: 100%
+	height: auto
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	border-top: 3px solid $accent1
+	position: relative
+	top: -118px
+
+.aside
+	width: 20%
+	display: flex
+	flex-direction: column
+	padding: 20px 0 20px 36px
+	border-right: 1px dotted $soc-color
+	border-bottom: 1px dotted $soc-color
+
+.aside_block:last-child
+	border: none
+
+.aside_block
+	border-bottom: 1px dotted $soc-color
+	padding-right: 10px
+
+.dotted	
+	width: 195px
+	text-align: center
+	border-bottom: 1px dotted $soc-color
+
+.h3
+	margin-top: 0
+	color: $accent
+	font-family: $default-font
+	font-size: 1.375em
+	font-weight: 400
+	line-height: 0.875em
+	text-transform: uppercase
+
+.aside_p
+	font-family: $second-font	
+	font-size: 0.670em
+	font-weight: 400
+	line-height: 1.875em
+	margin-bottom: 20px
+
+.related
+	padding-top: 20px
+	display: flex
+	flex-direction: column
+
+.aside_span_p
+	color: $accent
+	font-weight: bold
+
+.post
+	display: flex
+	flex-direction: column
+	padding-bottom: 20px
+
+.item_post
+	display: flex
+	justify-content: flex-start
+	padding: 10px 0
+
+.post_comments_p
+	margin: 0
+	font-family: $second-font	
+	font-size: 0.625em
+	font-weight: 600
+	line-height: 1.875em
+	padding-left: 20px
+	padding-right: 20px
+	color: $post_p	
+	text-transform: uppercase
+
+.post_comments_p2
+	margin: 0
+	font-family: $second-font	
+	font-size: 0.625em
+	font-weight: 400
+	font-style: italic
+	line-height: 1.875em
+	padding-left: 20px
+	padding-right: 20px
+	white-space: nowrap
+	color: $post_p
+
+.post_comm_img
+	padding-right: 5px	
+	color: $post_p	
+
+//currency
+
+.currency	
+	width: 100%
+	display: flex
+	flex-direction: column
+	padding: 20px 0
+
+th
+	width: 160px
+	height: 19px
+	background: $accent
+	color: $white
+	font-family: $second-font	
+	font-size: 0.625em
+	font-weight: 100
+	line-height: 0.875em
+	border: 1px solid $white
+
+tr
+	border: 1px solid $white
+	text-align: center
+
+.tr_1
+	background: rgba(144, 212, 245, 0.5)
+
+.tr_2
+ 	background: rgba(144, 212, 245, 0.7)	
+
+.table_border
+	width: 95%
+
+td
+	width: 160px
+	height: 19px
+	color: $accent
+	font-family: $second-font	
+	font-size: 0.625em
+	font-weight: 400
+	line-height: 1.000em
+	border: 1px solid $white
+
+.contents
+	position: relative
+	padding-top: 230px
+	padding-bottom: 30px
+	display: flex
+	width: 80%
+	flex-direction: column
+	border-bottom: 1px dotted $soc-color
+
+
+.sightseeings
+	width: 95%
+	display: flex
+	position: absolute
+	z-index: 1
+	top: -15px
+	flex-direction: column
+	padding-left: 15px
+	padding-right: 50px
+	padding-bottom: 20px
+	background: $white
+	border: 1px dotted $soc-color
+	border-top: 3px solid $accent1
+
+.sight_content
+	display: flex
+	justify-content: space-between
+
+.sightseeings_h2
+	font-family: $default_font
+	color: $accent
+	font-size: 2.000em
+	font-weight: 400
+	line-height: 0.875em
+	text-transform: uppercase
+
+.circles
+	width: 20%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: flex-start
+	padding-right: 15px
+
+.circle
+	width: 52px
+	height: 51px
+	background: $accent1
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-right: 5px
+
+.circle_p
+	font-family: $second-font
+	font-size: 0.500em
+	display: flex
+	justify-content: center
+	align-items: center	
+	color: $white
+	text-align: center
+	margin: 0
+
+.circle_position
+	position: relative	
+
+.circle_position_p
+	position: absolute
+	display: flex
+	justify-content: center
+	align-items: center
+
+.circle_column
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.circle_text
+	width: 80%
+	display: flex
+	flex-direction: column
+
+.content_txt_p	
+	font-family: $second_font
+	font-size: 0.750em
+	font-weight: 400
+	line-height: 1.500em
+	margin-top: 0
+
+.content_btn
+	width: 72px
+	padding: 5px 11px 5px 11px
+	color: $white
+	font-size: 0.625em
+	font-family: $second-font
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25)
+	border: 1px solid $btn_brd
+	background-color: $btn_bg
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%)	
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 1)
+	&:focus
+		border: 1px solid $accent
+		background-color: $accent1
+
+.btn_like
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+
+.like
+	width: 230px
+	height: 27px
+	background-color: #90d4f5
+	position: absolute
+	right: -60px
+	display: flex
+	justify-content: space-around
+	align-items: center
+	position: relative
+	&:after
+		content: ' '
+		position: absolute
+		width: 0
+		height: 0
+		right: 0px
+		top: 100%
+		border-width: 5px 5px
+		border-style: solid
+		border-color: $btn_bg transparent transparent $btn_bg
+
+.like_a
+	color: $btn_bg
+	font-family: $second-font
+	font-size: 0.625em
+	font-weight: 400
+	line-height: 1.125em
+	&:hover, &:focus
+		color: $white
+		text-decoration: none
+
+.like_img
+	padding-right: 5px
+
+
+//BLOGS
+
+.blogs
+	width: 95%
+	display: flex
+	justify-content: space-around
+	align-items: flex-start
+	padding-bottom: 30px
+
+
+.blog
+	width: 95%
+	min-height: 205px
+	padding: 20px
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	background: $blog_color
+	border-top-left-radius: 10px
+	
+.blog_left 
+	width: 50%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	
+
+
+.blog_right
+	width: 50%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	
+
+.blog1
+	width: 95%
+	min-height: 186px
+	padding: 20px 
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	background: $blog_color
+	border-top-left-radius: 10px
+
+.blog_p
+	margin-top: 0	
+	font-family: $second-font
+	font-size: 0.625em
+	font-weight: 400
+	line-height: 1.125em
+	color: $blog_post
+
+.h3_blog
+	margin: 0
+	color: $accent
+	font-family: $default-font
+	font-size: 1.375em
+	font-weight: 400
+	line-height: 0.875em
+	text-transform: uppercase
+
+.span_blog_p
+	color: $btn_bg
+
+.left_blog_p
+	font-family: $second-font
+	font-size: 0.625em
+	font-weight: 400
+	line-height: 1.725em
+	color: $post_p
+
+.right_blog_p
+	font-family: $second-font
+	font-size: 0.625em
+	font-weight: 400
+	line-height: 1.725em
+	color: $post_p
+	margin-bottom: 10px
+
+.blog_a
+	font-family: $second-font
+	font-size: 0.625em
+	font-weight: 400
+	line-height: 1.725em
+	color: $btn_bg
+	&:hover, &:focus
+		color: $accent1
+
+.blog_like
+	width: 95%
+	display: flex
+	justify-content: flex-end
+	align-items: flex-end
+	padding: 5px
+	background-color: $blog_line
+	-webkit-box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.3)
+       -moz-box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.3)
+            box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.3)
+    
+.blog_likes_imgs
+	padding-right: 5px
+
+.blog_likes_comments
+	font-family: $second-font
+	font-size: 0.625em
+	font-weight: 400
+	line-height: 1.725em
+	color: $btn_bg
+	padding-right: 10px
+
+
+//your ad here
+.your_add_here
+	width: 92.5%
+	height: 81px
+	padding: 20px
+	margin-left: 15px
+	display: flex
+	justify-content: center
+	align-items: center
+	background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.05) 100%)	
+
+	margin-top: 20px
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+       -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+
+.add
+	font-family: $second-font
+	font-size: 0.750em
+	font-weight: 400
+	line-height: 0.875em
+	color: $text-color
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75)
+
+
+//location
+
+.location
+	width: 100%
+	height: auto
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	position: relative
+	top: -80px
+.h2
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
+	color: $accent
+	font-family: $default_font
+	font-size: 2.000em
+	font-weight: 400
+	line-height: 0.875em
+	text-transform: uppercase
+	padding-left: 40px
+
+.map
+	width: 100%
+	height: 300px
+
+.footer
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	position: relative
+	top: -10px
+
+.main_footer
+	width: 100%
+	display: flex
+	justify-content: space-between	
+	border-bottom: 1px dotted $soc-color
+	padding-left: 40px
+
+.copy_p
+	text-align: center
+	font-family: $second_font
+	font-size: 0.625em
+	font-weight: 400
+	line-height: 1.125em
+	text-transform: uppercase
+
+
+
+@import "media" // Вседга в конце

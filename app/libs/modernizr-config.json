@@ -1,0 +1,20 @@
+{
+  "minify": true,
+  "options": [
+    "domPrefixes",
+    "prefixes",
+    "testAllProps",
+    "testProp",
+    "testStyles",
+    "html5shiv",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/css/animations",
+    "test/css/boxshadow",
+    "test/css/textshadow",
+    "test/css/transforms",
+    "test/css/transforms3d",
+    "test/css/transitions"
+  ]
+}
